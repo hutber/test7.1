@@ -28,4 +28,3 @@ export default class Job extends Component {
 Job.propTypes = {
   jobCount: PropTypes.number.isRequired
 };
-

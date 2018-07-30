@@ -2,11 +2,19 @@
   "name": "interview",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "commit": "git-cz",
+    "prepush": "npm run test",
+    "lint-scripts": "eslint './{src/**,test/**,config/**,.}/*.js'",
+    "lint-styles": "stylelint './src/**/*.css'",
+    "lint": "npm run lint-scripts && npm run lint-styles",
+    "postversion": "git push && git push --tags && npm publish",
+    "preversion": "npm run lint && npm run test && npm run build",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
@@ -19,13 +27,11 @@
       "git add"
     ]
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "commit": "git-cz",
-    "prepush": "npm run test"
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
@@ -34,6 +40,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
     "hutber-conventional-changelog": "^2.0.1",
+    "lint-staged": "^7.2.0",
     "prettier": "^1.14.0"
   },
   "config": {
