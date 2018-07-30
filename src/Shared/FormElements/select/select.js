@@ -8,6 +8,7 @@ export default class SelectBox extends Component {
       <div>
         <label htmlFor={name}>{header}</label>
         <select type="select" name={name} id={name}>
+          <option value="-1">select</option>
           {Object.keys(options).map((value) => {const optionName = options[value]; return <option key={`option_${value}`} value={value}>{optionName}</option>})}
         </select>
       </div>

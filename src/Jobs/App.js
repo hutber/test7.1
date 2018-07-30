@@ -9,7 +9,7 @@ export default class App extends Component {
 
     this.state = {
       buttonCount: [0, 1, 2, 3],
-      jobCount: 0
+      jobCount: 1
     }
   }
 

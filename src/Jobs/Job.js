@@ -15,8 +15,8 @@ export default class Job extends Component {
       };
 
     return (
-      <div>
-        <h2>{header}</h2>
+      <div className="job">
+        <h3 className="job__header">Job {header}</h3>
         <SelectBox options={occupationOptions} name="occupation" header="Whats is your occupation?" />
         <InputText type="text" name={`company_name_${jobCount}`} header="Company Name" placeholder="Enter company name" />
         <InputText type="number" name={`income_name_${jobCount}`} header="Income" placeholder="Enter Ammount" />
