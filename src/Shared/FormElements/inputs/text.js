@@ -1,13 +1,21 @@
 import React, {Component} from "react"
+import PropTypes from "prop-types";
 
 export default class InputText extends Component {
   render() {
-    const {inputtype, inputname, labeltitle} = this.props;
+    const {type, name, header} = this.props;
     return (
       <div>
-        <label htmlFor={inputname}>{labeltitle}</label>
-        <input type={inputtype} name={inputname} id={inputname} {...this.props} />
+        <label htmlFor={name}>{header}</label>
+        <input type={type} name={name} id={name} {...this.props} />
       </div>
     )
   }
 }
+
+InputText.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  header: PropTypes.string.isRequired
+};
+
