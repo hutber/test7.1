@@ -1,4 +1,14 @@
-##Setup
+## Background Info
+
+So this is the updated. I think you will find that I have avoided using many third-party tools, this was by choice.
+
+I felt that react-redux-form would likely be the way to go if you are going to do any high level of redux forms. Its hugely popular and lets you handle the fields states a lot more robustly then doing it by hand will ever give you.
+
+Otherwise I can't really see any justification of using any other third-party tools here, I was going to add css-moudles as this is my preferred way of doing styles now i must say.
+
+I personally feel opening up the test to be a bit longer would give people tested a bit more time to play and feel comfortable.
+
+## Setup
 Install commitizen
 
 `npm install -g commitizen`
@@ -12,7 +22,7 @@ Init commitizen configuration
 `commitizen init hutber-conventional-changelog --save-dev --save-exact`
 
 
-##Usage
+## Usage
 
 `git cz`
 
